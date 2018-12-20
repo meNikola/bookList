@@ -58,6 +58,11 @@ UI.prototype.clearFields = function () {
 
 
 
+
+
+
+
+
 // Event Listeners for added
 document.getElementById('book-form').addEventListener('submit', function (e) {
   const title = document.getElementById('title').value,
@@ -73,6 +78,7 @@ document.getElementById('book-form').addEventListener('submit', function (e) {
     ui.showAlert('Please fill in all fields', 'error');
   } else {
     ui.addBookToList(book);
+
     ui.showAlert('Book Added!', 'success');
     ui.clearFields();
   }
